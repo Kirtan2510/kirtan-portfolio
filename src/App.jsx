@@ -487,6 +487,211 @@ export default function KirtanPortfolio() {
         </div>
       </section>
 
+      {/* ABOUT */}
+      <section
+        id="about"
+        style={{
+          padding: "7rem clamp(1rem,5vw,5rem)",
+          background: "#0d1829",
+        }}
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "4rem",
+            alignItems: "start",
+          }}
+        >
+          {/* LEFT — headline + bio */}
+          <div>
+            <R>
+              <div
+                style={{
+                  fontFamily: "'JetBrains Mono',monospace",
+                  fontSize: "0.68rem",
+                  color: "#00d4ff",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.18em",
+                  marginBottom: "1rem",
+                }}
+              >
+                // about.me
+              </div>
+              <h2
+                style={{
+                  fontFamily: "'Syne',sans-serif",
+                  fontSize: "clamp(2rem,4vw,3rem)",
+                  fontWeight: 800,
+                  lineHeight: 1.1,
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Building systems
+                <br />
+                <span style={{ color: "transparent", WebkitTextStroke: "1.5px rgba(0,212,255,.7)" }}>
+                  that scale.
+                </span>
+              </h2>
+            </R>
+            <R delay={100}>
+              <p style={{ color: "#6b8ab0", lineHeight: 1.9, marginBottom: "1.2rem", fontSize: "0.95rem" }}>
+                I'm a <strong style={{ color: "#e8f0fe" }}>3rd-year B.Tech IT student</strong> at Parul
+                University, Vadodara. My focus is building full-stack products that don't just work — they
+                perform under load and are designed to grow.
+              </p>
+              <p style={{ color: "#6b8ab0", lineHeight: 1.9, marginBottom: "1.2rem", fontSize: "0.95rem" }}>
+                I spend time equally across the stack — React interfaces, Node.js APIs, database design, and
+                low-level systems programming in C++. Outside of coursework I'm deep into competitive
+                programming and system design architecture.
+              </p>
+              <p style={{ color: "#6b8ab0", lineHeight: 1.9, fontSize: "0.95rem" }}>
+                When I'm not coding, I'm studying how large-scale systems like Google Spanner, Kafka, or
+                Redis are architected — and applying those ideas to my own projects.
+              </p>
+            </R>
+          </div>
+
+          {/* RIGHT — cards */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+
+            {/* What I bring */}
+            <R delay={150}>
+              <div
+                style={{
+                  background: "rgba(14,30,55,.7)",
+                  border: "1px solid rgba(0,212,255,.1)",
+                  padding: "1.6rem",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "'JetBrains Mono',monospace",
+                    fontSize: "0.65rem",
+                    color: "#00d4ff",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.18em",
+                    marginBottom: "1.1rem",
+                  }}
+                >
+                  What I bring
+                </div>
+                {[
+                  ["⚡", "Full-Stack Engineering", "React + Node.js + MongoDB end-to-end"],
+                  ["🧠", "DSA & Problem Solving", "500+ LeetCode · 400+ GFG · DP & Graphs"],
+                  ["🏗️", "System Design", "HLD, microservices, caching, CAP theorem"],
+                  ["🔒", "Low-Level Systems", "C++ networking, packet inspection, Linux"],
+                ].map(([icon, title, sub]) => (
+                  <div
+                    key={title}
+                    style={{
+                      display: "flex",
+                      gap: "1rem",
+                      alignItems: "flex-start",
+                      marginBottom: "0.9rem",
+                    }}
+                  >
+                    <span style={{ fontSize: "1.1rem", marginTop: "0.1rem" }}>{icon}</span>
+                    <div>
+                      <div
+                        style={{
+                          fontFamily: "'Outfit',sans-serif",
+                          fontWeight: 500,
+                          fontSize: "0.88rem",
+                          color: "#e8f0fe",
+                          marginBottom: "0.15rem",
+                        }}
+                      >
+                        {title}
+                      </div>
+                      <div
+                        style={{
+                          fontFamily: "'JetBrains Mono',monospace",
+                          fontSize: "0.67rem",
+                          color: "#6b8ab0",
+                        }}
+                      >
+                        {sub}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </R>
+
+            {/* Code-style "currently" block */}
+            <R delay={200}>
+              <div
+                style={{
+                  background: "#0a1628",
+                  border: "1px solid rgba(0,212,255,.1)",
+                  padding: "1.4rem",
+                  fontFamily: "'JetBrains Mono',monospace",
+                  fontSize: "0.75rem",
+                  lineHeight: 1.9,
+                }}
+              >
+                <div style={{ color: "#6b8ab0", marginBottom: "0.6rem" }}>// currently.js</div>
+                <div>
+                  <span style={{ color: "#00d4ff" }}>const</span>
+                  <span style={{ color: "#e8f0fe" }}> kirtan </span>
+                  <span style={{ color: "#6b8ab0" }}>=</span>
+                  <span style={{ color: "#e8f0fe" }}> {"{"}</span>
+                </div>
+                {[
+                  ["  studying", '"B.Tech IT — Parul University"'],
+                  ["  building", '"Farm Fusion, DSA Tracker, DPI Tool"'],
+                  ["  grinding", '"LeetCode Hard · System Design"'],
+                  ["  open_to",  '"Internships & Full-time Roles"'],
+                ].map(([k, v]) => (
+                  <div key={k}>
+                    <span style={{ color: "#1e7bff" }}>{k}</span>
+                    <span style={{ color: "#6b8ab0" }}>: </span>
+                    <span style={{ color: "#f0a050" }}>{v}</span>
+                    <span style={{ color: "#6b8ab0" }}>,</span>
+                  </div>
+                ))}
+                <div style={{ color: "#e8f0fe" }}>{"}"}</div>
+              </div>
+            </R>
+
+            {/* Location / availability pills */}
+            <R delay={250}>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "0.75rem",
+                  flexWrap: "wrap",
+                }}
+              >
+                {[
+                  ["📍", "Vadodara, Gujarat"],
+                  ["🎓", "B.Tech IT · 2027"],
+                  ["✅", "Open to Opportunities"],
+                ].map(([icon, text]) => (
+                  <span
+                    key={text}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.4rem",
+                      padding: "0.45rem 1rem",
+                      border: "1px solid rgba(0,212,255,.15)",
+                      background: "rgba(0,212,255,.04)",
+                      fontFamily: "'JetBrains Mono',monospace",
+                      fontSize: "0.7rem",
+                      color: "#6b8ab0",
+                    }}
+                  >
+                    {icon} {text}
+                  </span>
+                ))}
+              </div>
+            </R>
+          </div>
+        </div>
+      </section>
+
       {/* SKILLS */}
       <section
         id="skills"
@@ -536,6 +741,123 @@ export default function KirtanPortfolio() {
                 ))}
               </div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* EDUCATION */}
+      <section
+        id="education"
+        style={{
+          padding: "7rem clamp(1rem,5vw,5rem)",
+          background: "#0d1829",
+        }}
+      >
+        <h2 style={{ fontFamily: "'Syne',sans-serif", marginBottom: "3rem" }}>
+          Education & Learning
+        </h2>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+          {EDUCATION.map((e, i) => (
+            <R key={e.degree} delay={i * 100}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "clamp(160px,22%,240px) 1fr",
+                  gap: "2rem",
+                  background: "rgba(14,30,55,.7)",
+                  border: `1px solid ${e.active ? "rgba(0,212,255,.35)" : "rgba(0,212,255,.1)"}`,
+                  padding: "2rem",
+                  alignItems: "start",
+                }}
+              >
+                {/* LEFT — year */}
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "'JetBrains Mono',monospace",
+                      fontSize: "0.68rem",
+                      color: e.active ? "#00d4ff" : "#6b8ab0",
+                      letterSpacing: "0.1em",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {e.year}
+                  </div>
+                  {e.active && (
+                    <div
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.4rem",
+                        marginTop: "0.75rem",
+                        padding: "0.25rem 0.7rem",
+                        border: "1px solid rgba(0,212,255,.3)",
+                        background: "rgba(0,212,255,.06)",
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: 6,
+                          height: 6,
+                          background: "#00d4ff",
+                          borderRadius: "50%",
+                          animation: "pulse 2s infinite",
+                          display: "block",
+                        }}
+                      />
+                      <span
+                        style={{
+                          fontFamily: "'JetBrains Mono',monospace",
+                          fontSize: "0.62rem",
+                          color: "#00d4ff",
+                          letterSpacing: "0.12em",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        Current
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                {/* RIGHT — content */}
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "'Syne',sans-serif",
+                      fontSize: "1.15rem",
+                      fontWeight: 700,
+                      color: "#e8f0fe",
+                      marginBottom: "0.3rem",
+                    }}
+                  >
+                    {e.degree}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "'JetBrains Mono',monospace",
+                      fontSize: "0.72rem",
+                      color: "#00d4ff",
+                      marginBottom: "0.9rem",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    {e.inst}
+                  </div>
+                  <p
+                    style={{
+                      color: "#6b8ab0",
+                      fontSize: "0.875rem",
+                      lineHeight: 1.8,
+                      margin: 0,
+                    }}
+                  >
+                    {e.desc}
+                  </p>
+                </div>
+              </div>
+            </R>
           ))}
         </div>
       </section>
